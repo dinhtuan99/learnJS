@@ -1,0 +1,32 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "idnex.js",
+  "scripts": {
+    "prettier": "prettier --config .prettierrc src/**/*.js --write",
+    "lint": "eslint src/ --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinhtuan99/learnJS.git"
+  },
+  "author": "tuanvd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinhtuan99/learnJS/issues"
+  },
+  "homepage": "https://github.com/dinhtuan99/learnJS#readme",
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "eslint-plugin-prettier": "^4.0.0"
+  }
+}

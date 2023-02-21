@@ -5,3 +5,20 @@ Idle/Prepare - internal phase
 Poll - process I/O callbacks
 Check - execute any setImmediate() timers added in the Poll phase
 Close - loop continues if there are more timers or I/O calls. If all timers and I/O calls are done, the loop closes and the process ends.
+
+Version Package json
+Pay special attention to the version listed. The format is as follows.
+
+First number = major version
+Second number = minor release
+Third number = patch
+The version states what was installed, but it also clarifies how it can be updated should you remove the node_modules and package-lock.json files and reinstall all dependencies with $ npm install.
+
+The additional included characters (or lack thereof) tell npm how to maintain your dependencies.
+
+* means that you'll accept all updates
+^ means that you'll only accept minor releases
+~ means that you'll only accept patch releases
+>, >=, <=, < are also valid for saying you'll accept versions greater/less/equal to the listed version
+|| allows you to combine instructions "prettier": "2.2.1 || >2.2.1 < 3.0.0" which says use prettier greater than 2.2.1 and less than version 3.0.0
+You can also leave off a prefix and only accept the listed version
