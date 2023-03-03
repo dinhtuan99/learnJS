@@ -22,3 +22,52 @@ The additional included characters (or lack thereof) tell npm how to maintain yo
 >, >=, <=, < are also valid for saying you'll accept versions greater/less/equal to the listed version
 || allows you to combine instructions "prettier": "2.2.1 || >2.2.1 < 3.0.0" which says use prettier greater than 2.2.1 and less than version 3.0.0
 You can also leave off a prefix and only accept the listed version
+
+Typescripts
+void - used as a return type when the function returns nothing
+
+const myFunc = (student: string): void => {
+  console.log(student);
+};
+never - used as a return type when the function will never return anything, such as with functions that throw errors or infinite loops
+
+const myError = (err: string): never => {
+  throw new Error(err); 
+}
+any - should be avoided. Used when the type of the item being typed can be anything
+
+const myFunc = (student: any): any => {
+  // do something
+};
+unknown - used when the type of the thing being typed is unknown. Used heavily for type assertion
+
+const myFunc = (student: unknown): string => {
+  // do something
+}
+
+
+Typescripts best practic
+Use strong checks to prevent developer errors
+One way to do this is to use noImplicitAny in tsconfig.json to prevent errors created by Typescript assuming Any type.
+Turn on all strict checking by setting strict to true in your tsconfiig.json settings.
+Pay attention to when to use Implicit vs Explicit typing
+const
+
+Typing: Implicit
+Value is immutable so type can't be changed
+let
+
+Typing: Explicit
+Value and type can be changed
+Function with controlled inputs
+
+Typing: Implicit
+Output is controlled and code is simpler
+Single-line arrow function
+
+Typing: Implicit
+Simpler code
+Longer function
+
+Typing: Explicit
+Easier to read
